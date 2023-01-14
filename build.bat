@@ -1,0 +1,2 @@
+"%MSFS_SDK%\Tools\bin\fspackagetool.exe" "lxn-ingamepanel\Build\maximus-ingamepanels-custom.xml" -nomirroring
+copy /Y "lxn-ingamepanel\Build\Packages\lxn-ingamepanel\Build\maximus-ingamepanels-custom.spb" "lxn-ingamepanel\InGamePanels"
