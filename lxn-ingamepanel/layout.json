@@ -1,29 +1,54 @@
 {
   "content": [
     {
+      "path": "Build/icon.png",
+      "size": 12958,
+      "date": 133161228916558609
+    },
+    {
+      "path": "Build/maximus-ingamepanels-custom.xml",
+      "size": 290,
+      "date": 133161228916628617
+    },
+    {
+      "path": "Build/PackageDefinitions/maximus-ingamepanels-custom.xml",
+      "size": 644,
+      "date": 133161228916718622
+    },
+    {
+      "path": "Build/PackageSources/maximus-ingamepanels-custom.xml",
+      "size": 537,
+      "date": 133161228916828660
+    },
+    {
+      "path": "html_ui/icons/toolbar/dashboard.svg",
+      "size": 897,
+      "date": 133203525587324723
+    },
+    {
       "path": "html_ui/InGamePanels/CustomPanel/CustomPanel.css",
-      "size": 1009,
-      "date": 132441482909180874
+      "size": 2124,
+      "date": 133183764106842395
     },
     {
       "path": "html_ui/InGamePanels/CustomPanel/CustomPanel.html",
-      "size": 3119,
-      "date": 132440507097241168
+      "size": 2094,
+      "date": 133174259772359749
     },
     {
       "path": "html_ui/InGamePanels/CustomPanel/CustomPanel.js",
-      "size": 5517,
-      "date": 132442481411972180
+      "size": 7487,
+      "date": 133194024081263540
     },
     {
       "path": "html_ui/Textures/Menu/toolbar/ICON_TOOLBAR_MAXIMUS_CUSTOM_PANEL.svg",
-      "size": 702,
-      "date": 132401952992678246
+      "size": 2641,
+      "date": 133161228917291689
     },
     {
       "path": "InGamePanels/maximus-ingamepanels-custom.spb",
-      "size": 806,
-      "date": 132453435271410222
+      "size": 698,
+      "date": 133161228916888672
     }
   ]
 }

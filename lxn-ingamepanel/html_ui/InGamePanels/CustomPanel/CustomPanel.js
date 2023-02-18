@@ -8,71 +8,9 @@ class IngamePanelCustomPanel extends TemplateElement {
         this.busy = false;
         this.debugEnabled = false;
 
-        if (this.debugEnabled) {
-            var self = this;
-            setTimeout(() => {
-                self.isDebugEnabled();
-            }, 1000);
-        } else {
-            this.initialize();
-        }
+        this.initialize();
     }
-    isDebugEnabled() {
-        var self = this;
-        if (typeof g_modDebugMgr != "undefined") {
-            g_modDebugMgr.AddConsole(null);
-            g_modDebugMgr.AddDebugButton("Identifier", function() {
-                console.log('Identifier');
-                console.log(self.instrumentIdentifier);
-            });
-            g_modDebugMgr.AddDebugButton("TemplateID", function() {
-                console.log('TemplateID');
-                console.log(self.templateID);
-            });
-            g_modDebugMgr.AddDebugButton("Source", function() {
-                console.log('Source');
-                console.log(window.document.documentElement.outerHTML);
-            });
-			g_modDebugMgr.AddDebugButton("close", function() {
-				console.log('close');
-				if (self.ingameUi) {
-					console.log('ingameUi');
-					self.ingameUi.closePanel();
-				}
-			});
-            this.initialize();
-        } else {
-            Include.addScript("/JS/debug.js", function () {
-                if (typeof g_modDebugMgr != "undefined") {
-                    g_modDebugMgr.AddConsole(null);
-                    g_modDebugMgr.AddDebugButton("Identifier", function() {
-                        console.log('Identifier');
-                        console.log(self.instrumentIdentifier);
-                    });
-                    g_modDebugMgr.AddDebugButton("TemplateID", function() {
-                        console.log('TemplateID');
-                        console.log(self.templateID);
-                    });
-                    g_modDebugMgr.AddDebugButton("Source", function() {
-                        console.log('Source');
-                        console.log(window.document.documentElement.outerHTML);
-                    });
-                    g_modDebugMgr.AddDebugButton("close", function() {
-                        console.log('close');
-                        if (self.ingameUi) {
-                            console.log('ingameUi');
-                            self.ingameUi.closePanel();
-                        }
-                    });
-                    self.initialize();
-                } else {
-                    setTimeout(() => {
-                        self.isDebugEnabled();
-                    }, 2000);
-                }
-            });
-        }
-    }
+
     connectedCallback() {
         super.connectedCallback();
 
@@ -104,9 +42,12 @@ class IngamePanelCustomPanel extends TemplateElement {
                 document.getElementById("CustomPanel").classList.toggle("interact");
 			});
         }
-
-		
     }
+
+    Update() {
+        console.log("Panel-Update");
+    }
+
     initialize() {
         if (this.started) {
             return;
@@ -147,39 +88,14 @@ class IngamePanelCustomPanel extends TemplateElement {
 
         })
 
-        //var self = this;
-        //this.m_MainDisplay = document.querySelector("#MainDisplay");
-        //this.m_MainDisplay.classList.add("hidden");
-
-        //this.m_Footer = document.querySelector("#Footer");
-        //this.m_Footer.classList.add("hidden");
-
-        //this.iframeElement = document.getElementById("CustomPanelIframe");
-        //this.ingameUi = this.querySelector('ingame-ui');
-
-        /*if (this.ingameUi) {
-            this.ingameUi.addEventListener("panelActive", (e) => {
-                console.log('panelActive');
-                self.updateImage();
-            });
-            this.ingameUi.addEventListener("panelInactive", (e) => {
-                console.log('panelInactive');
-                self.iframeElement.src = '';
-            });
-            this.ingameUi.addEventListener("onResizeElement", () => {
-                //self.updateImage();
-            });
-            this.ingameUi.addEventListener("dblclick", () => {
-                if (self.m_Footer) {
-                    self.m_Footer.classList.remove("hidden");
-                }
-            });
-        }*/
+        
         this.started = true;
     }
+
     disconnectedCallback() {
         super.disconnectedCallback();
     }
+    
     updateImage() {
 
     }
