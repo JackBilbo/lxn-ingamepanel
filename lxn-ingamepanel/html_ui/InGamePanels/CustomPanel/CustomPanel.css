@@ -64,7 +64,7 @@ ingame-ui#CustomPanel .ingameUiWrapper {
 
 ingame-ui-header {
   position: absolute;
-  top: -100px;
+  top: -10rem;
 }
 
 .interact ingame-ui-header {
