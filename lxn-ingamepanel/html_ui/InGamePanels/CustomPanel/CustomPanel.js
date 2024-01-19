@@ -75,6 +75,11 @@ class IngamePanelCustomPanel extends TemplateElement {
 
                 if(this.grid) {
                     this.setVar("lxn-ui",this.grid);
+                } else {
+                    if(GetStoredData("lxn-ui")) {
+                        this.grid = GetStoredData("lxn-ui");
+                        this.setVar("lxn-ui",this.grid);
+                    }
                 }
             }
 
