@@ -25,7 +25,8 @@ class IngamePanelCustomPanel extends TemplateElement {
                 self.panelActive = true;
                 if (self.iframeElement) {
                     // self.iframeElement.src = 'http://127.0.0.1:5500/lxn-online/dist/index.html?ingamepanel';
-                    self.iframeElement.src = 'https://lxn2.web.app/index.html?ingamepanel';
+                    // self.iframeElement.src = 'https://lxn2.web.app/index.html?ingamepanel';
+                    self.iframeElement.src = 'http://localhost:3000/';
                 }
             });
             this.ingameUi.addEventListener("panelInactive", (e) => {
