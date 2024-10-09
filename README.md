@@ -1,3 +1,5 @@
-Ingame panel for lxn2.web.app // based on maximus panel template
+New Panel development, early pre-alpha-state
 
-For more info check out https://lxn2.web.app/doc_ingamepanel.html
+- Native MSFS Integration, no external dependencies, no more iframe-related issues
+- all code referenced live from https://lxnext.web.app - no need to regularly update the local installation for functional updates and bug fixes
+
